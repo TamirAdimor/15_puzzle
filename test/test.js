@@ -17,7 +17,7 @@ describe('PuzzleBoard', function() {
         let cornerCellRow = puzzleBoard.board.length - 1;
         let cornerCellCol = puzzleBoard.board.width - 1;
 
-        it('before move corner should be the biggest value', function() {
+        it('before move corner should have the biggest value', function() {
             chai.assert.equal(puzzleBoard.board.cells[cornerCellRow][cornerCellCol].id,
                 puzzleBoard.board.getCellIdentifier(cornerCellRow, cornerCellCol));
         });
@@ -55,7 +55,7 @@ describe('WinChecker', function() {
         let puzzleBoard = new PuzzleBoard(4, 4);
         puzzleBoard.makeTurn(Directions.UP);
 
-        it('should be false', function () {
+        it('should be true', function () {
             chai.assert.equal(puzzleBoard.isWin(), true);
         });
     });
@@ -69,4 +69,15 @@ describe('Shuffler', function() {
     it("Board after shuffle shouldn't be in win state", function () {
         chai.assert.equal(puzzleBoard.isWin(), false);
     });
+});
+
+describe('Game', function() {
+    let game = new Game();
+    game.init();
+
+    it("initialized game shoudn't be in win state", function () {
+        chai.assert.equal(game.hasWon, false);
+    });
+
+
 });
