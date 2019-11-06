@@ -7,7 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -19,5 +19,8 @@
     "url": "https://github.com/TamirAdimor/15_puzzle/issues"
   },
   "homepage": "https://github.com/TamirAdimor/15_puzzle#readme",
-  "dependencies": {}
+  "dependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.2.2"
+  }
 }
