@@ -1,6 +1,6 @@
 
 class ReverseShuffler {
-    shuffle(puzzleBoard, nMoves = 10) {
+    shuffle(puzzleBoard, nMoves = 1000) {
         for (let i = 0; i < nMoves; i++) {
             let directions = Object.values(Directions);
             let randomDirectionIndex, randomDirection;
