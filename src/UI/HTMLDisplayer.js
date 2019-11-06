@@ -2,13 +2,13 @@
 class HTMLDisplayer {
     constructor(inputHandler = new ArrowsInputHandler(), boardDisplayer = new BoardDisplayer()) {
         this.inputHandler = inputHandler.handleKey;
-        this.displayBoard = boardDisplayer.displayBoard;
+        this.displayBoard = () => boardDisplayer.displayBoard(this._game.puzzleBoard.board);
 
         this._game = new Game();
         this._game.init();
 
         this.setInputListeners();
-        this.displayBoard(this._game.puzzleBoard.board);
+        this.displayBoard();
     }
 
     setInputListeners() {

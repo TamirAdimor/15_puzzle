@@ -4,7 +4,7 @@
 - Clone the project
 - open src/main.html
 
-#### interacting with the game using js console
+### interacting with the game using js console
 - press F12
 - on console, use:
 	- `UI._game.goUp()`
