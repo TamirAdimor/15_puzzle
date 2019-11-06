@@ -9,10 +9,6 @@ h1 {
     align-items: center;
 }
 
-.board {
-
-}
-
 .hidden {
     visibility: hidden;
 }
@@ -34,4 +30,13 @@ h1 {
     justify-content: center;
     font-size: -webkit-xxx-large;
     color: white;
+}
+
+#restart-button {
+    margin-top: 8px;
+    padding: 4px;
+    border-radius: 2px;
+    background-color: #0087de;
+    color: white;
+    border: none;
 }

@@ -1,6 +1,6 @@
 
 class Board {
-    constructor(length, width) {
+    constructor(length, width, Cell = SimpleCell) {
         this.length = length;
         this.width = width;
         this.cells = [];
@@ -16,10 +16,10 @@ class Board {
     }
 
     getCellIdentifier(i, j) {
-        return i * this.length + j;
+        return i * this.width + j;
     }
 
-    _switchCells([firstCellRow, firstCellCol], [secondCellRow, secondCellCol]) {
+    switchCells([firstCellRow, firstCellCol], [secondCellRow, secondCellCol]) {
         let tempCell = this.cells[firstCellRow][firstCellCol];
         this.cells[firstCellRow][firstCellCol] = this.cells[secondCellRow][secondCellCol];
         this.cells[secondCellRow][secondCellCol] = tempCell;

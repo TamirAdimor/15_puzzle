@@ -18,5 +18,6 @@
   "bugs": {
     "url": "https://github.com/TamirAdimor/15_puzzle/issues"
   },
-  "homepage": "https://github.com/TamirAdimor/15_puzzle#readme"
+  "homepage": "https://github.com/TamirAdimor/15_puzzle#readme",
+  "dependencies": {}
 }
