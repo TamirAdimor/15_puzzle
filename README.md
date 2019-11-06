@@ -11,7 +11,7 @@
 	- `UI._game.goDown()`
 	- `UI._game.goRight()`
 	- `UI._game.goLeft()`
-- after move, inorder to refresh the display, use:
+- after move, in order to refresh the display, use:
 `UI.displayBoard()`
 
 ## Run Tests
