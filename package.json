@@ -19,8 +19,5 @@
     "url": "https://github.com/TamirAdimor/15_puzzle/issues"
   },
   "homepage": "https://github.com/TamirAdimor/15_puzzle#readme",
-  "dependencies": {
-    "chai": "^4.2.0",
-    "mocha": "^6.2.2"
-  }
+  "dependencies": {}
 }
