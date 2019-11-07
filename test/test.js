@@ -53,6 +53,12 @@ describe('WinChecker', function() {
 
 describe('Shuffler', function() {
     let puzzleBoard = new PuzzleBoard(4, 4);
+
+    it("Possible directions of new board should be DOWN and RIGHT", function () {
+        chai.assert.deepEqual(puzzleBoard.getPossibleDirections(puzzleBoard.board, 3, 3),
+            [Directions.DOWN, Directions.RIGHT]);
+    });
+
     puzzleBoard.shuffle();
 
     it("Board after shuffle shouldn't be in win state", function () {
