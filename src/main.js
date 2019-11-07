@@ -1,1 +1,1 @@
-const UI = new HTMLDisplayer();
+const UI = new HtmlUi();

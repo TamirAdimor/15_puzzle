@@ -1,6 +1,6 @@
 
 class Board {
-    constructor(length, width, Cell = SimpleCell) {
+    constructor(length, width) {
         this.length = length;
         this.width = width;
         this.cells = [];
@@ -8,8 +8,7 @@ class Board {
         for (let i = 0; i < length; i++) {
             let row = [];
             for (let j = 0; j < width; j++) {
-                let identifier = this.getCellIdentifier(i, j);
-                row.push(new Cell(identifier));
+                row.push(this.getCellIdentifier(i, j));
             }
             this.cells.push(row);
         }
@@ -23,6 +22,7 @@ class Board {
         let tempCell = this.cells[firstCellRow][firstCellCol];
         this.cells[firstCellRow][firstCellCol] = this.cells[secondCellRow][secondCellCol];
         this.cells[secondCellRow][secondCellCol] = tempCell;
+        return this.cells;
     }
 
 }

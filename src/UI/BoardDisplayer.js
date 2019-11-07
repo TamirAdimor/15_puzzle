@@ -9,7 +9,7 @@ class BoardDisplayer {
             for (let j = 0; j < board.width; j++) {
                 let element = document.createElement("div");
                 element.className = "cell";
-                let cellId = board.cells[i][j].id;
+                let cellId = board.cells[i][j];
                 element.innerHTML = cellId === board.length * board.width - 1 ? "" : cellId + 1;
                 row.appendChild(element);
             }

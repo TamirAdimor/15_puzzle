@@ -13,6 +13,6 @@ class ArrowsInputHandler {
                     return game.goLeft();
             }
         }
-        return false;
+        return game;
     }
 }

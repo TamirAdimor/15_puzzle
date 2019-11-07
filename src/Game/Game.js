@@ -7,6 +7,7 @@ class Game {
 
     init() {
         this.puzzleBoard.shuffle();
+        return this;
     }
 
     goUp() {
@@ -27,7 +28,7 @@ class Game {
 
     _makeTurn(direction) {
         this.puzzleBoard.makeTurn(direction);
-        this.hasWon = this.puzzleBoard.isWin();
-        return this.hasWon;
+        this.hasWon = this.hasWon || this.puzzleBoard.isWin();
+        return this;
     }
 }

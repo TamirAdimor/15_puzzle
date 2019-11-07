@@ -1,33 +1,22 @@
 
 describe('PuzzleBoard', function() {
-    describe('create PuzzleBoard', function() {
-        let puzzleBoard = new PuzzleBoard(4, 4);
-
-        it('should have length 4', function() {
-            chai.assert.equal(puzzleBoard.board.length, 4);
-        });
-
-        it('should have width 4', function() {
-            chai.assert.equal(puzzleBoard.board.width, 4);
-        });
-    });
-
     describe('should perform down move on new board', function() {
         let puzzleBoard = new PuzzleBoard(4, 4);
         let cornerCellRow = puzzleBoard.board.length - 1;
         let cornerCellCol = puzzleBoard.board.width - 1;
 
         it('before move corner should have the biggest value', function() {
-            chai.assert.equal(puzzleBoard.board.cells[cornerCellRow][cornerCellCol].id,
+            chai.assert.equal(puzzleBoard.board.cells[cornerCellRow][cornerCellCol],
                 puzzleBoard.board.getCellIdentifier(cornerCellRow, cornerCellCol));
         });
 
         it('should be able to perform DOWN move', function() {
-            chai.assert.equal(puzzleBoard.makeTurn(Directions.DOWN), true);
+            chai.assert.equal(puzzleBoard.makeTurn(Directions.DOWN).cells[cornerCellRow - 1][cornerCellCol],
+                puzzleBoard.board.getCellIdentifier(cornerCellRow, cornerCellCol));
         });
 
         it('after move corner should differ from the biggest value', function() {
-            chai.assert.notEqual(puzzleBoard.board.cells[cornerCellRow][cornerCellCol].id,
+            chai.assert.notEqual(puzzleBoard.board.cells[cornerCellRow][cornerCellCol],
                 puzzleBoard.board.getCellIdentifier(cornerCellRow, cornerCellCol));
         });
     });
@@ -78,6 +67,4 @@ describe('Game', function() {
     it("initialized game shoudn't be in win state", function () {
         chai.assert.equal(game.hasWon, false);
     });
-
-
 });
