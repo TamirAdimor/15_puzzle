@@ -11,7 +11,7 @@ describe('PuzzleBoard', function() {
         });
 
         it('should be able to perform DOWN move', function() {
-            chai.assert.equal(puzzleBoard.makeTurn(Directions.DOWN).cells[cornerCellRow - 1][cornerCellCol],
+            chai.assert.equal(puzzleBoard.makeTurn(Directions.DOWN).board.cells[cornerCellRow - 1][cornerCellCol],
                 puzzleBoard.board.getCellIdentifier(cornerCellRow, cornerCellCol));
         });
 
